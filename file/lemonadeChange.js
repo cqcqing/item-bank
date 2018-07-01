@@ -14,6 +14,7 @@ var lemonadeChange = function(bills) {
     var a=0,b=0,c=0,result=false;
     for(i=0;i<bills.length;i++){
         bill=bills[i];
+        result=false;
         switch(bill){
            case 5:
                 a++;
@@ -39,8 +40,9 @@ var lemonadeChange = function(bills) {
                         result=true;
                     }
                 }
-           break;
+                break;
            }
+           if(!result) break;
     }
     return result;
     
